@@ -14,15 +14,13 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.android.volley.Request
+
 import com.android.volley.RequestQueue
 import com.android.volley.Response
 import com.android.volley.VolleyError
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import com.maths.cryptotracker.CurrencyModel
-import com.maths.cryptotracker.R
-import com.maths.cryptotracker.currencyAdapter
+
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
