@@ -20,13 +20,11 @@ import com.android.volley.Response
 import com.android.volley.VolleyError
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
-import com.maths.cryptotracker.CurrencyModel
-import com.maths.cryptotracker.R
-import com.maths.cryptotracker.currencyAdapter
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
 
@@ -85,7 +83,7 @@ class MainActivity : AppCompatActivity() {
         val url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
         val queue: RequestQueue = Volley.newRequestQueue(this)
 
-        val jsonObjectRequest = object : JsonObjectRequest(Request.Method.GET, url, null,
+        val jsonObjectRequest = object : JsonObjectRequest(Method.GET, url, null,
             Response.Listener { response ->
                 loadingPB.visibility = View.GONE
                 try {

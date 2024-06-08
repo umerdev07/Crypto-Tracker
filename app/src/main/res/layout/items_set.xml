@@ -57,7 +57,8 @@
             app:layout_constraintEnd_toStartOf="@+id/price"
             app:layout_constraintHorizontal_bias="0.128"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
