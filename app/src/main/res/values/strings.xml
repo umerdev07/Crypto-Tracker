@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Crypto Tracker</string>
+    <string name="Search">\n\n\n</string>
+    <string name="price">Price</string>
+    <string name="full_foam">full foam</string>
+    <string name="up_to_date_down_to_earth_crypto_tracking">Up-to-Date, Down-to-Earth Crypto Tracking</string>
+</resources>
