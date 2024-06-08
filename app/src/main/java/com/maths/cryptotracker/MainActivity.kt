@@ -20,11 +20,14 @@ import com.android.volley.Response
 import com.android.volley.VolleyError
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.maths.cryptotracker.CurrencyModel
+import com.maths.cryptotracker.R
+import com.maths.cryptotracker.currencyAdapter
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
+import java.util.Locale
 
-@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
 
@@ -68,7 +71,7 @@ class MainActivity : AppCompatActivity() {
     private fun filter(filter: String) {
         val filteredList = ArrayList<CurrencyModel>()
         for (item in currencyModalArrayList) {
-            if (item.name.toLowerCase().contains(filter.toLowerCase())) {
+            if (item.name.lowercase(Locale.getDefault()).contains(filter.lowercase(Locale.getDefault()))) {
                 filteredList.add(item)
             }
         }
@@ -83,7 +86,8 @@ class MainActivity : AppCompatActivity() {
         val url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
         val queue: RequestQueue = Volley.newRequestQueue(this)
 
-        val jsonObjectRequest = object : JsonObjectRequest(Method.GET, url, null,
+        val jsonObjectRequest = object : JsonObjectRequest(
+            Method.GET, url, null,
             Response.Listener { response ->
                 loadingPB.visibility = View.GONE
                 try {
