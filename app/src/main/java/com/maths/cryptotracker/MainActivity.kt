@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.maths.cryptotracker
 
 import android.annotation.SuppressLint
@@ -84,7 +86,8 @@ class MainActivity : AppCompatActivity() {
         val url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
         val queue: RequestQueue = Volley.newRequestQueue(this)
 
-        val jsonObjectRequest = object : JsonObjectRequest(
+        val jsonObjectRequest = @SuppressLint("NotifyDataSetChanged")
+        object : JsonObjectRequest(
             Method.GET, url, null,
             Response.Listener { response ->
                 loadingPB.visibility = View.GONE
